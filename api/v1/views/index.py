@@ -11,12 +11,12 @@ from models.user import User
 from models.amenity import Amenity
 
 
-@app_views.route('/status')
+@app_views.route('/status', strict_slashes=False)
 def status():
     return jsonify({'status': 'OK'})
 
 
-@app_views.route('/stats')
+@app_views.route('/stats', strict_slashes=False)
 def stats():
     num_of_states = storage.count(State)
     num_of_cities = storage.count(City)
