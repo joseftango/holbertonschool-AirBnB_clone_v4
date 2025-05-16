@@ -29,11 +29,11 @@
 						<h2>{{ state.name }}</h2>
 						<ul>
 							{% for city in data['cities'] | sort(attribute="name") %}
-							{% if city.state_id == state.id %}
-							<li>
-								<h4>{{ city.name }}</h4>
-							</li>
-							{% endif %}
+								{% if city.state_id == state.id %}
+									<li>
+										<h4>{{ city.name }}</h4>
+									</li>
+								{% endif %}
 							{% endfor %}
 						</ul>
 					</li>
@@ -77,7 +77,7 @@
 				</div>
 				{% for user in data['users'] %}
 				{% if user.id == place.user_id %}
-				<div class="user"><b>Owner</b>: {{ user.first_name }} {{ user.last_name }}</div>
+					<div class="user"><b>Owner</b>: {{ user.first_name }} {{ user.last_name }}</div>
 				{% endif %}
 				{% endfor %}
 				<div class="description">
