@@ -31,7 +31,7 @@ def cities_by_states():
     return render_template('8-cities_by_states.html', states=sorted_states)
 
 
-@app.route("/0-hbnb/", strict_slashes=False)
+@app.route("/1-hbnb/", strict_slashes=False)
 def hbnb():
     '''displayes states, citites, amenities and places objects'''
     states = storage.all(State).values()
@@ -39,7 +39,7 @@ def hbnb():
     amenities = storage.all(Amenity).values()
     places = storage.all(Place).values()
     users = storage.all(User).values()
-    return render_template('0-hbnb.html',
+    return render_template('1-hbnb.html',
                            data={'states': states,
                                  'cities': cities,
                                  'amenities': amenities,
