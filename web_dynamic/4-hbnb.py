@@ -37,8 +37,6 @@ def hbnb():
     states = storage.all(State).values()
     cities = storage.all(City).values()
     amenities = storage.all(Amenity).values()
-    places = storage.all(Place).values()
-    users = storage.all(User).values()
     return render_template('4-hbnb.html',
                            data={'states': states,
                                  'cities': cities,
