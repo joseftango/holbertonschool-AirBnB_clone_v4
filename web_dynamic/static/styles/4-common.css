@@ -10,4 +10,5 @@ body {
 .container {
     max-width: 1000px;
     margin: 30px auto;
+	min-height: 70vh;
 }
